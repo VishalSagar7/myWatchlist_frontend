@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.parent {
+    position: relative;
+  }
+  
+  .parent .hover-show {
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    font-size: 1.5vw;
+    color: rgb(194, 183, 183);
+  }
+  
+  .parent:hover .hover-show {
+    opacity: 1;
+    visibility: visible; 
+  }
+  
+  
