@@ -92,11 +92,11 @@ const Header = (params) => {
 
 
     return (
-        <div className='h-[80px] w-full bg-[rgb(3,37,65)] flex justify-between items-center px-[100px]'>
+        <div className='h-[80px] w-full bg-[rgb(3,37,65)] flex justify-between items-center px-[10px] lg:px-[100px]'>
 
-            <h1 className='text-xl text-white font-bold'>My WatchList</h1>
+            <h1 className='text-xl hidden lg:block text-white font-bold'>My WatchList</h1>
 
-            <div className='w-[300px]'>
+            <div className='lg:w-[300px]'>
                 <input
                     className='w-full h-[30px] pl-[10px] rounded'
                     placeholder='Search movies...'
@@ -108,7 +108,7 @@ const Header = (params) => {
 
             {username && (
                 <div className='flex w-[250px] justify-between items-center'>
-                    <Link to="/watchlist"><h1 className='text-white font-semibold text-lg cursor-pointer transition duration-100 hover:text-sky-500'>{`${fname}'s Watchlist`}</h1></Link>
+                    <Link to="/watchlist"><h1 className='text-white font-semibold text-sm ml-[20px] lg:mx-0 lg:text-lg cursor-pointer transition duration-100 hover:text-sky-500'>{`${fname}'s Watchlist`}</h1></Link>
                     <Tooltip title="Account"><AccountCircleIcon onClick={handleClick} sx={{ fontSize: '35px', color: 'white' }} /></Tooltip>
                     <Menu
                         id="basic-menu"

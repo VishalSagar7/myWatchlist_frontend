@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.parent {
+/* .parent {
     position: relative;
   }
   
@@ -17,6 +17,6 @@
   .parent:hover .hover-show {
     opacity: 1;
     visibility: visible; 
-  }
+  } */
   
   

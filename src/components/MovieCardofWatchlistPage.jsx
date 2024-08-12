@@ -20,7 +20,7 @@ const MovieCardofWatchlistPage = (props) => {
 
     return (
         <Link to={`/moviedetailofwatchlist/${id}`}> 
-            <div className='h-[450px] w-[250px] p-[5px] bg-gray-300 rounded  transition duration-300 hover:scale-[101%]'>
+            <div className='h-[450px]  w-[300px] lg:w-[250px] p-[5px] bg-gray-300 rounded  transition duration-300 hover:scale-[101%]'>
                 <div className='h-[88%] w-full'>
                     <img
                         className='h-full rounded w-full object-cover'

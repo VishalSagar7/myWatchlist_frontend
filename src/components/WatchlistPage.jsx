@@ -102,7 +102,7 @@ const WatchlistPage = () => {
         </div>
       )}
 
-      <div className=' flex mt-[20px] flex-wrap justify-left gap-[30px]'>
+      <div className=' flex justify-center lg:justify-start mt-[20px] flex-wrap justify-left gap-[30px]'>
         {
           watchlistArray.map((movie) =>
             <MovieCardofWatchlistPage key={movie.id} data={movie} />

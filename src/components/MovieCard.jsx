@@ -16,7 +16,7 @@ const MovieCard = (props) => {
 
     return (
         <Link to={`/moviedetail/${id}`}> 
-            <div className='h-[450px] w-[250px] p-[5px] rounded hover:bg-gray-300  transition decoration-neutral-300 hover:scale-[101%]'>
+            <div className='h-[450px] w-[300px] lg:w-[250px] p-[5px] rounded hover:bg-gray-300  transition decoration-neutral-300 hover:scale-[101%]'>
                 <div className='h-[85%] w-full'>
                     <img
                         className='h-full rounded w-full object-cover'

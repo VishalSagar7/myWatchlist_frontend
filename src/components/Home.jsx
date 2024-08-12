@@ -77,7 +77,7 @@ const Home = () => {
             <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} getDetails={() => fetchMovies(1, searchQuery)} />
         
 
-            <div className='h-[60px] w-full flex justify-start px-[100px] gap-[20px] items-center'>
+            <div className='h-[60px] w-full flex justify-start px-[5px] lg:px-[100px] gap-[20px] items-center'>
                 <button className='h-[30px] w-[100px] border rounded bg-sky-500 text-white transition duration-200 hover:bg-sky-400 active:scale-[95%]' onClick={() => fetchMovies()}>Home</button>
                 {Object.keys(genreIds).map((genre) => (
                     <button
@@ -109,9 +109,9 @@ const Home = () => {
                                         }}
                                     >
                                         <div className='relative z-10 p-[20px]'>
-                                            <h1 className='text-white text-6xl font-bold'>{firstMovie.title}</h1>
-                                            <h1 className='mt-[20px] text-gray-200 text-3xl font-semibold'>Currently trending #1</h1>
-                                            <p className='text-white mt-[20px] hover-show'>{firstMovie.overview}</p>
+                                            <h1 className='text-white text-3xl lg:text-6xl font-bold'>{firstMovie.title}</h1>
+                                            <h1 className='mt-[20px] text-gray-200 text-2xl lg:text-3xl font-semibold'>Currently trending #1</h1>
+                                            <p className=' text-gray-300 mt-[20px] hover-show'>{firstMovie.overview}</p>
                                         </div>
                                     </div>
 

@@ -137,11 +137,11 @@ const MovieDetailforWatchlist = () => {
 
     return (
         <>
-            <div className='h-[100vh] w-full bg-sky-400 relative'>
+            <div className=' h-[110vh] lg:h-[100vh] w-full bg-sky-400 relative'>
 
 
                 <div
-                    className='h-full w-full flex relative'
+                    className='h-full w-full flex flex-wrap relative'
                     style={{
                         backgroundImage: movieDetail?.poster_path ? `url(https://image.tmdb.org/t/p/w500${movieDetail.poster_path})` : 'none',
                         backgroundSize: 'cover',
@@ -160,12 +160,12 @@ const MovieDetailforWatchlist = () => {
                         </Alert>
                     )}
 
-                    <Link to="/watchlist"><Tooltip title="watshlist page"><button className='bg-white absolute top-[40px] left-[75px] px-[5px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
+                    <Link to="/watchlist"><Tooltip title="watshlist page"><button className='bg-white absolute top-[40px] lg:left-[75px] lg:px-[5px] left-[15px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
 
-                    <div className='h-full w-[30%] z-10 flex justify-center items-center'>
+                    <div className='h-[50%] mt-[20px] lg:mt-0 lg:h-full w-[90%] lg:w-[30%] z-10 flex justify-center items-center'>
                         <img className='h-[70%] w-[70%] object-cover object-center rounded' src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`} />
                     </div>
-                    <div className='h-full w-[70%] z-10 pt-[60px] px-[40px]'>
+                    <div className='h-[50%] lg:h-full w-full mt-[-60px] lg:mt-0 lt:w-[70%] z-10 lg:pt-[60px] px-[30px] lg:px-[40px]'>
                         <h1 className=' text-white text-[35px] font-bold'>{movieDetail?.title} <span className='text-gray-300 font-thin'>({Year})</span></h1>
                         <h1 className=' text-gray-100'>
                             <span className='text-lg'>{movieDetail?.release_date}</span>
