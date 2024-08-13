@@ -20,7 +20,7 @@ const MovieCardofWatchlistPage = (props) => {
 
     return (
         <Link to={`/moviedetailofwatchlist/${id}`}> 
-            <div className='h-[450px]  w-[300px] lg:w-[250px] p-[5px] bg-gray-300 rounded  transition duration-300 hover:scale-[101%]'>
+            <div className='h-[450px]  w-[300px] lg:w-[200px] lg:h-auto p-[5px]  rounded  transition duration-300 hover:bg-gray-300'>
                 <div className='h-[88%] w-full'>
                     <img
                         className='h-full rounded w-full object-cover'
@@ -29,7 +29,7 @@ const MovieCardofWatchlistPage = (props) => {
                     />
                 </div>
                 <div className=' w-full flex items-center mt-[5px]'>
-                    <h1 className='font-semibold text-lg leading-5'>{title} <span>({year})</span></h1>
+                    <h1 className='font-semibold text-md leading-5'>{title} <span>({year})</span></h1>
                 </div>
             </div>
         </Link>

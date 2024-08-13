@@ -44,8 +44,8 @@ const MovieDetail = () => {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${apiKey}`);
         const data = await response.json();
         // console.log(data.results[0].key);
-        setTrailorKey(data.results[0].key)
-        setTrailorKey2(data.results[1].key)
+        setTrailorKey(data.results[0].key);
+        setTrailorKey2(data.results[1].key);
 
     }
 
@@ -237,7 +237,7 @@ const MovieDetail = () => {
                 <div className='w-full lg:h-[700px] h-[400px] lg:w-[1000px] mx-auto'>
                     <iframe
                         className='w-full h-full rounded'
-                        src={`https://www.youtube.com/embed/${trailorKey}?autoplay=1&mute=1`}
+                        src={`https://www.youtube.com/embed/${trailorKey}?autoplay=1`}
                         allow="autoplay; encrypted-media"
                         allowfullscreen
                     ></iframe>

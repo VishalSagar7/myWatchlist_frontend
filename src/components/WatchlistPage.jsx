@@ -71,7 +71,7 @@ const WatchlistPage = () => {
   if (!watchlistArray) {
     return (<div className=' bg-gray-100 h-[100vh] px-[100px] pt-[40px]'>
 
-      <div className='h-[40px] w-[400px] rounded bg-gray-300'>
+      <div className='h-[40px] w-[400px] rounded bg-gray-200 '>
       </div>
 
       <div className='flex flex-wrap justify-between gap-[40px] pt-[40px] '>
@@ -92,7 +92,7 @@ const WatchlistPage = () => {
 
 
   return (
-    <div className=' min-h-[100vh] w-full px-[50px] pt-[20px] bg-gray-200'>
+    <div className=' min-h-[100vh] w-full px-[50px] pt-[20px] '>
       <Link to="/"><Tooltip title="go to home"><button className='bg-white px-[5px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
       <h1 className='text-2xl text-gray-800 mt-[10px] font-bold'>{`Your Watchlist`}</h1>
 
