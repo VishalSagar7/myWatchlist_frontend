@@ -75,11 +75,12 @@ const MovieDetail = () => {
 
         fetchData();
         getVideo();
+        console.log("calling inside useEffect");
 
     }, [id]);
 
     // console.log(userInfo);
-    const useremail = userInfo.email;
+    const useremail = userInfo?.email ?? "";
     // console.log(useremail);
 
 

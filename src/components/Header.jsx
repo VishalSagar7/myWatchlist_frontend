@@ -6,12 +6,12 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Tooltip } from '@mui/material';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { useNavigate } from 'react-router-dom';
+
 
 const Header = (params) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-    const navigate = useNavigate()
+
 
     const searchQuery = params.searchQuery
     const setSearchQuery = params.setSearchQuery
@@ -51,7 +51,7 @@ const Header = (params) => {
     }, []);
 
     const username = userInfo?.user?.username;
-    
+
     // console.log(username);
 
     let fname;
@@ -77,16 +77,16 @@ const Header = (params) => {
 
     const email = userInfo?.user?.email
     // console.log(email);
-    
-    
+
+
     const handlelogout = async () => {
-        
+
         fetch(`${BASE_URL}/logout`, {
             credentials: 'include',
             method: 'POST',
         });
         setUserInfo(null);
-        
+
     }
 
 

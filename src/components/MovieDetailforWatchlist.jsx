@@ -69,13 +69,13 @@ const MovieDetailforWatchlist = () => {
     }, [id]);
 
     // console.log(userInfo);
-    const useremail = userInfo.email;
+    const useremail = userInfo?.email ?? "";
     // console.log(useremail);
 
 
 
     if (!movieDetail) {
-        return <MovieDetailShimmer/>; // Optionally, you can add a loading spinner here
+        return <MovieDetailShimmer />; // Optionally, you can add a loading spinner here
     }
 
     const Yeararray = movieDetail?.release_date.split('-');
@@ -151,7 +151,7 @@ const MovieDetailforWatchlist = () => {
                 >
                     {alert && (
                         <Alert
-                            sx={{ position: 'absolute', top: '30px',right: '100px', zIndex: '20' }}
+                            sx={{ position: 'absolute', top: '30px', right: '100px', zIndex: '20' }}
                             icon={alert.type === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
                             severity={alert.type}
                             onClose={() => setAlert(null)} // Optional: Close the alert
