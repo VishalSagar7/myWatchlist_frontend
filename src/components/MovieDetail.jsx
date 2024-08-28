@@ -169,11 +169,11 @@ const MovieDetail = () => {
 
     return (
         <>
-            <div className='h-[110vh] lg:h-[100vh] w-full bg-sky-400 relative'>
+            <div className='h-[auto] lg:h-[100vh] bg-black w-full relative'>
 
 
                 <div
-                    className='h-full w-full   lg:flex relative'
+                    className=' z-10 lg:z-auto  h-[150vh] lg:h-full w-full   lg:flex relative'
                     style={{
                         backgroundImage: movieDetail?.poster_path ? `url(https://image.tmdb.org/t/p/w500${movieDetail.poster_path})` : 'none',
                         backgroundSize: 'cover',
@@ -195,9 +195,9 @@ const MovieDetail = () => {
                     <Link to="/"><Tooltip title="go to home"><button className='bg-white absolute top-[15px] left-[15px] lg:top-[40px] lg:left-[75px] px-[5px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
 
                     <div className='h-[50%] mx-auto lg:h-full w-[300px] lg:w-[30%] lg:z-10 flex justify-center items-center'>
-                        <img className='h-[70%] z-20 lg:w-[70%] object-cover object-center rounded' src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`} />
+                        <img className='h-[70%]  lg:w-[70%] object-cover object-center rounded' src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`} />
                     </div>
-                    <div className='h-[40%] lg:h-full w-full lg:w-[70%] z-50 lg:z-20 lg:pt-[60px] mt-[-50px] lg:mt-0 px-[30px] lg:px-[40px]'>
+                    <div className='h-[40%] lg:h-full w-full lg:w-[70%]  lg:z-20 lg:pt-[60px] mt-[-50px] lg:mt-0 px-[30px] lg:px-[40px]'>
                         <h1 className=' text-white text-[35px] font-bold'>{movieDetail?.title} <span className='text-gray-300 font-thin'>({Year})</span></h1>
                         <h1 className=' text-gray-100 '>
                             <span className='text-lg'>{movieDetail?.release_date}</span>
@@ -227,7 +227,7 @@ const MovieDetail = () => {
 
                 </div>
 
-                <div className=' absolute inset-0 z-1' style={{ background: 'rgba(0, 0, 0, 0.9)' }}>
+                <div className=' lg:block absolute inset-0' style={{ background: 'rgba(0, 0, 0, 0.9)' }}>
 
                 </div>
 
