@@ -138,7 +138,7 @@ const Header = (params) => {
 
             {!username && (
                 <div className='w-[200px] text-white flex justify-between items-center'>
-                    <Link to='/login'><h1 className='text-xl font-semibold cursor-pointer hover:text-sky-500'>Login</h1></Link>
+                    <Link to='/login'><h1 className='text-xl font-semibold cursor-pointer ml-[20px] hover:text-sky-500'>Login</h1></Link>
                     <Link to='/signup'><h1 className='text-xl font-semibold cursor-pointer hover:text-sky-500'>Register</h1></Link>
                 </div>
             )}

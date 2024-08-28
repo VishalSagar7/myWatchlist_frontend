@@ -137,7 +137,7 @@ const MovieDetailforWatchlist = () => {
 
     return (
         <>
-            <div className=' h-[110vh] lg:h-[100vh] w-full bg-sky-400 relative'>
+            <div className=' h-[140vh] lg:h-[100vh] w-full bg-black relative'>
 
 
                 <div
@@ -150,14 +150,16 @@ const MovieDetailforWatchlist = () => {
                     }}
                 >
                     {alert && (
-                        <Alert
-                            sx={{ position: 'absolute', top: '30px', right: '100px', zIndex: '20' }}
-                            icon={alert.type === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
-                            severity={alert.type}
-                            onClose={() => setAlert(null)} // Optional: Close the alert
-                        >
-                            {alert.message}
-                        </Alert>
+                        <div className='fixed z-20 top-[20px] right-[50px]'>
+                            <Alert
+                                sx={{ zIndex: '20' }}
+                                icon={alert.type === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
+                                severity={alert.type}
+                                onClose={() => setAlert(null)} // Optional: Close the alert
+                            >
+                                {alert.message}
+                            </Alert>
+                        </div>
                     )}
 
                     <Link to="/watchlist"><Tooltip title="watshlist page"><button className='bg-white absolute top-[40px] lg:left-[75px] lg:px-[5px] left-[15px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
@@ -165,7 +167,7 @@ const MovieDetailforWatchlist = () => {
                     <div className='h-[50%] mt-[20px] lg:mt-0 lg:h-full w-[90%] lg:w-[30%] z-10 flex justify-center items-center'>
                         <img className='h-[70%] w-[70%] object-cover object-center rounded' src={`https://image.tmdb.org/t/p/w500${movieDetail.poster_path}`} />
                     </div>
-                    <div className='h-[50%] lg:h-full w-full mt-[-60px] lg:mt-0 lg:w-[70%] z-10 lg:pt-[60px] px-[30px] lg:px-[40px]'>
+                    <div className='h-[50%] lg:h-full w-full mt-[-40px]  lg:mt-0 lg:w-[70%] z-10 lg:pt-[60px] px-[30px] lg:px-[40px]'>
                         <h1 className=' text-white text-[35px] font-bold'>{movieDetail?.title} <span className='text-gray-300 font-thin'>({Year})</span></h1>
                         <h1 className=' text-gray-100'>
                             <span className='text-lg'>{movieDetail?.release_date}</span>

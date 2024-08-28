@@ -173,7 +173,7 @@ const MovieDetail = () => {
 
 
                 <div
-                    className=' z-10 lg:z-auto  h-[150vh] lg:h-full w-full   lg:flex relative'
+                    className=' z-10 lg:z-auto  h-[150vh] lg:h-full w-full  lg:flex relative'
                     style={{
                         backgroundImage: movieDetail?.poster_path ? `url(https://image.tmdb.org/t/p/w500${movieDetail.poster_path})` : 'none',
                         backgroundSize: 'cover',
@@ -182,14 +182,17 @@ const MovieDetail = () => {
                     }}
                 >
                     {alert && (
-                        <Alert
-                            sx={{ position: 'absolute', top: '10px', right: '100px', zIndex: '20' }}
-                            icon={alert.type === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
-                            severity={alert.type}
-                            onClose={() => setAlert(null)} // Optional: Close the alert
-                        >
-                            {alert.message}
-                        </Alert>
+                        <div className=' fixed z-10 top-[20px] right-[50px]'>
+                            <Alert
+                                sx={{ zIndex: '20' }}
+                                icon={alert.type === 'success' ? <CheckIcon fontSize="inherit" /> : <ErrorIcon fontSize="inherit" />}
+                                severity={alert.type}
+                                onClose={() => setAlert(null)} // Optional: Close the alert
+                            >
+                                {alert.message}
+                            </Alert>
+
+                        </div>
                     )}
 
                     <Link to="/"><Tooltip title="go to home"><button className='bg-white absolute top-[15px] left-[15px] lg:top-[40px] lg:left-[75px] px-[5px] rounded font-medium z-30 transform duration-150 hover:bg-gray-200'>{`< Go back`}</button></Tooltip></Link>
