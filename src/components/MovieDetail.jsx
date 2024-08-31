@@ -9,6 +9,7 @@ import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import ErrorIcon from '@mui/icons-material/Error';
 import MovieDetailShimmer from './MovieDetailShimmer';
+import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
 const apiKey = '52c1b4e3926b7e8672736ab2872b2812';
 
@@ -115,6 +116,14 @@ const MovieDetail = () => {
     // console.log(movieDetail);
     // console.log(userInfo);
 
+    const scrollToTrailor = () => {
+        const trailorElement = document.getElementById('trailor');
+        if (trailorElement) {
+            trailorElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    
+
 
 
     async function AddmovietoWatchlist() {
@@ -215,15 +224,46 @@ const MovieDetail = () => {
 
                         {useremail && (
                             <div className='flex w-[120px] mt-[10px] justify-between items-center'>
-                                <Tooltip title="Add to favourites"><button><FavoriteIcon sx={{ fontSize: '50px', color: 'white' }} /></button></Tooltip>
+                                {/* <Tooltip title="Add to favourites"><button><FavoriteIcon sx={{ fontSize: '50px', color: 'white' }} /></button></Tooltip> */}
                                 {(flag == false) && (
-                                    <Tooltip onClick={() => AddmovietoWatchlist()} title='Add to watchlist'><button><BookmarkIcon sx={{ fontSize: '50px', color: 'white' }} /></button></Tooltip>
+                                    <button
+                                        onClick={() => AddmovietoWatchlist()}
+                                        className="min-w-[175px] mt-[10px] h-[45px] !w-[500px] bg-white border border-white rounded-full flex items-center justify-around font-medium px-[10px] 
+                                        hover:bg-transparent hover:text-white hover:border-white group transition-colors duration-300 active:scale-[104%]"
+
+                                    >
+                                        <BookmarkIcon
+                                            sx={{ fontSize: '35px' }}
+                                            className="text-black group-hover:text-white transition-colors duration-300"
+                                        />
+                                        Add to watchlist
+                                    </button>
+
                                 )}
                                 {(flag) && (
-                                    <Tooltip onClick={() => AddmovietoWatchlist()} title='Add to watchlist'><button><BookmarkIcon sx={{ fontSize: '50px', color: 'gray' }} /></button></Tooltip>
+                                    <button
+                                        onClick={() => AddmovietoWatchlist()}
+                                        className='min-w-[175px] mt-[10px] h-[45px] !w-[500px] bg-white rounded-full flex items-center justify-center px-[10px] font-medium'
+                                    >
+                                        <BookmarkIcon sx={{ fontSize: '35px', color: 'black' }} /> Add to watchlist
+                                    </button>
                                 )}
                             </div>
+
                         )}
+
+                        <button
+                            onClick={scrollToTrailor}
+                            className="min-w-[175px] mt-[15px] h-[45px] bg-white border border-white rounded-full flex items-center justify-around font-medium px-[10px] 
+                                       hover:bg-transparent hover:text-white hover:border-white group transition-colors duration-300 active:scale-[104%]"
+                        >
+                            <PlayCircleOutlineRoundedIcon
+                                sx={{ fontSize: '35px' }}
+                                className="text-black group-hover:text-white transition-colors duration-300"
+                            />
+                            Watch Trailer
+                        </button>
+
 
 
                     </div>
@@ -236,13 +276,13 @@ const MovieDetail = () => {
 
             </div>
 
-            <div className='h-auto w-full bg-black p-[30px] flex justify-between'>
+            <div className='h-auto w-full bg-black p-[30px] flex justify-between' id='trailor'>
 
                 <div className='w-full lg:h-[700px] h-[400px] lg:w-[1000px] mx-auto'>
                     <iframe
                         className='w-full h-full rounded'
                         src={`https://www.youtube.com/embed/${trailorKey}?autoplay=1`}
-                        allow="autoplay; encrypted-media"
+                        // allow="autoplay; encrypted-media"
                         allowfullscreen
                     ></iframe>
                 </div>

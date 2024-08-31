@@ -52,7 +52,7 @@ const Header = (params) => {
 
     const username = userInfo?.user?.username;
 
-    // console.log(username);
+    console.log(username);
 
     let fname;
 
